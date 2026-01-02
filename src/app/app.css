@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:host {
+    font-family: 'Inter', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #667eea, transparent);
+    transform: translateX(-1px);
+}
+
+@media (max-width: 768px) {
+    .experience-timeline::before {
+        left: 0;
+    }
+}
+
+.experience-item {
+    position: relative;
+    padding-left: 60px;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #667eea;
+    border: 3px solid white;
+    box-shadow: 0 0 0 3px #667eea;
+}
+
+@media (max-width: 768px) {
+    .experience-item::before {
+        left: -36px;
+    }
+
+    .experience-item {
+        padding-left: 0;
+        padding-bottom: 40px;
+    }
+}
