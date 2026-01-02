@@ -43,6 +43,7 @@ interface ContactForm {
 export class App {
   activeSection = signal('home');
   mobileMenuOpen = signal(false);
+  currentYear = signal(new Date().getFullYear());
   contactFormData: ContactForm = {
     name: '',
     email: '',
@@ -54,9 +55,9 @@ export class App {
   navLinks = ['home', 'about', 'experience', 'skills', 'contact'];
 
   stats = [
-    { number: '12+', label: 'Years Experience' },
-    { number: '50+', label: 'Projects Delivered' },
-    { number: '30+', label: 'Developers Mentored' },
+    { number: '09+', label: 'Years Experience' },
+    { number: '5+', label: 'Projects Delivered' },
+    { number: '10+', label: 'Developers Mentored' },
     { number: '8%', label: 'Performance Gain' },
   ];
 
@@ -152,7 +153,7 @@ export class App {
       gradient: 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-100',
       iconColor: 'text-green-600',
       categories: [
-        { label: 'Angular Expertise', skills: ['Angular 21', 'Angular 16+', 'TypeScript', 'RxJS'] },
+        { label: 'Angular Expertise', skills: ['Angular 2+', 'Angular 16+', 'TypeScript', 'RxJS'] },
         { label: 'Web Technologies', skills: ['HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript'] },
       ],
     },
