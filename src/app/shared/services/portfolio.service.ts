@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Experience } from '../models/experience.model';
-import { Skill } from '../models/skill.model';
+import { IExperience } from '../models/experience.model';
+import { ISkill } from '../models/skill.model';
 
 @Injectable({
   providedIn: 'root',
@@ -32,7 +32,7 @@ export class PortfolioService {
     },
   ];
 
-  readonly experiences: Experience[] = [
+  readonly experiences: IExperience[] = [
     {
       title: 'Senior Full Stack Engineer',
       company: 'OneAdvanced',
@@ -85,7 +85,7 @@ export class PortfolioService {
     },
   ];
 
-  readonly skills: Skill[] = [
+  readonly skills: ISkill[] = [
     {
       icon: 'fas fa-server',
       title: 'Backend Development',

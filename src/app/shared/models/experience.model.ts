@@ -1,4 +1,4 @@
-export interface Experience {
+export interface IExperience {
   title: string;
   company: string;
   location: string;

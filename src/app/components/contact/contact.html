@@ -1,0 +1,65 @@
+  <section id="contact" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Get In Touch</h2>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        @for (contact of contactMethods; track contact.title) {
+        <div class="text-center">
+          <div
+               class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i [class]="contact.icon + ' text-2xl text-blue-600'"></i>
+          </div>
+          <h3 class="font-bold text-lg mb-2">{{ contact.title }}</h3>
+          <a
+             [href]="contact.link"
+             [target]="contact.link.startsWith('http') ? '_blank' : undefined"
+             [rel]="contact.link.startsWith('http') ? 'noopener noreferrer' : undefined"
+             class="text-gray-600 hover:text-blue-600 transition-colors">
+            {{ contact.text }}
+          </a>
+        </div>
+        }
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+        <h3 class="text-2xl font-bold mb-6 text-center">Send me a Message</h3>
+        <div class="space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <input
+                   type="text"
+                   placeholder="Your Name"
+                   [(ngModel)]="contactFormData.name"
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all" />
+            <input
+                   type="email"
+                   placeholder="Your Email"
+                   [(ngModel)]="contactFormData.email"
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all" />
+          </div>
+          <input
+                 type="text"
+                 placeholder="Subject"
+                 [(ngModel)]="contactFormData.subject"
+                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all" />
+          <textarea
+                    placeholder="Your Message"
+                    rows="5"
+                    [(ngModel)]="contactFormData.message"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200 transition-all"></textarea>
+          <button
+                  (click)="handleSubmit()"
+                  class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:from-blue-700 hover:to-purple-700">
+            Send Message
+          </button>
+        </div>
+        @if (formMessage().text) {
+        <p
+           [class]="
+                'mt-4 text-center text-sm font-semibold ' +
+                (formMessage().type === 'error' ? 'text-red-600' : 'text-green-600')
+              ">
+          {{ formMessage().text }}
+        </p>
+        }
+      </div>
+    </div>
+  </section>

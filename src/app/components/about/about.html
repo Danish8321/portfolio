@@ -1,0 +1,36 @@
+<section id="about" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    I'm a passionate full-stack engineer with a deep commitment to building
+                    high-quality, scalable applications. With 09+ years of professional experience, I've
+                    had the privilege of working on diverse projects ranging from healthcare platforms
+                    to supply chain management systems.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    My expertise spans across Microsoft technologies (.NET, .NET Core), modern frontend
+                    frameworks (Angular 2+), cloud services (Azure), and databases (SQL Server). I'm
+                    particularly passionate about clean architecture, test-driven development, and
+                    mentoring the next generation of engineers.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    I believe in continuous learning and staying at the forefront of technology trends,
+                    whether it's the latest Angular versions, cloud-native architectures, or emerging
+                    patterns in software design.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                @for (feature of aboutFeatures; track feature.title) {
+                <div
+                     class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-100 hover:shadow-lg transition-shadow duration-300">
+                    <i [class]="feature.icon + ' text-3xl text-blue-600 mb-3'"></i>
+                    <h3 class="font-semibold text-lg mb-2">{{ feature.title }}</h3>
+                    <p class="text-gray-600 text-sm">{{ feature.desc }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

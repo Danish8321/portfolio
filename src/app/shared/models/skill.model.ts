@@ -1,6 +1,6 @@
 import { SkillCategory } from './skillCategory.model';
 
-export interface Skill {
+export interface ISkill {
   icon: string;
   title: string;
   categories: SkillCategory[];
