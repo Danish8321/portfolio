@@ -1,0 +1,16 @@
+:root {
+  /* Brand colors */
+  --color-primary: #2563eb;       /* blue-600 */
+  --color-secondary: #9333ea;     /* purple-600 */
+  --color-timeline: #667eea;      /* gradient accent used in experience timeline */
+
+  /* Surface colors */
+  --color-surface-dark: #111827;  /* gray-900 */
+
+  /* Text colors */
+  --color-text-muted: #4b5563;    /* gray-600 */
+  --color-text-light: #d1d5db;    /* gray-300 */
+
+  /* Typography */
+  --font-sans: 'Inter', sans-serif;
+}
