@@ -17,9 +17,7 @@ import { PortfolioService } from './shared/services/portfolio.service';
 export class App {
   portfolioService = inject(PortfolioService);
 
-  stats = this.portfolioService.stats;
-
-  contactMethods = this.portfolioService.contactMethods;
+  readonly stats = this.portfolioService.stats;
 
   scrollToSection(sectionId: string): void {
     const element = document.getElementById(sectionId);
