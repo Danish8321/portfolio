@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ContactForm } from '../../shared/models/contactForm.model';
 import { PortfolioService } from '../../shared/services/portfolio.service';
@@ -8,18 +8,13 @@ import { PortfolioService } from '../../shared/services/portfolio.service';
   imports: [FormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Contact {
-  portfolioService = inject(PortfolioService);
-  contactFormData: ContactForm = {
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-  };
+  readonly portfolioService = inject(PortfolioService);
+  contactFormData: ContactForm = { name: '', email: '', subject: '', message: '' };
   formMessage = signal<{ text: string; type: string }>({ text: '', type: '' });
-
-  contactMethods = this.portfolioService.contactMethods;
+  readonly contactMethods = this.portfolioService.contactMethods;
 
   handleSubmit(): void {
     if (

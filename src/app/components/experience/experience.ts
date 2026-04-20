@@ -1,5 +1,4 @@
-import { Component, inject } from '@angular/core';
-import { IExperience } from '../../shared/models/experience.model';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { PortfolioService } from '../../shared/services/portfolio.service';
 
 @Component({
@@ -7,9 +6,9 @@ import { PortfolioService } from '../../shared/services/portfolio.service';
   imports: [],
   templateUrl: './experience.html',
   styleUrl: './experience.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Experience {
-  portfolioService = inject(PortfolioService);
-
-  experiences: IExperience[] = this.portfolioService.experiences;
+  readonly portfolioService = inject(PortfolioService);
+  readonly experiences = this.portfolioService.experiences;
 }

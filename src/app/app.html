@@ -4,41 +4,42 @@
 
   <!-- Hero Section -->
   <section
-           id="home"
-           class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20 md:py-32">
+    id="home"
+    class="bg-gradient-to-br from-blue-600 to-purple-600 text-white py-20 md:py-32"
+  >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center animate-fade-in">
         <h1 class="text-4xl md:text-6xl font-bold mb-6">Danish Ahmad</h1>
-        <p class="text-xl md:text-2xl mb-8 text-blue-100">
-          Senior Full Stack Software Engineer
-        </p>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100">Senior Full Stack Software Engineer</p>
         <p class="text-lg mb-8 text-blue-100 max-w-3xl mx-auto">
-          09+ years of expertise building scalable web applications with .NET, Angular, and
-          modern cloud technologies. Specialized in system architecture, performance
-          optimization, and leading high-performing teams.
+          09+ years of expertise building scalable web applications with .NET, Angular, and modern
+          cloud technologies. Specialized in system architecture, performance optimization, and
+          leading high-performing teams.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <button
-                  (click)="scrollToSection('contact')"
-                  class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:shadow-lg">
+            (click)="scrollToSection('contact')"
+            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 hover:shadow-lg"
+          >
             Get In Touch
           </button>
           <a
-             href="https://linkedin.com/in/danishahmad8321"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300">
+            href="https://linkedin.com/in/danishahmad8321"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+          >
             View LinkedIn
           </a>
         </div>
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-        @for (stat of stats; track stat.label) {
-        <div class="text-center">
-          <div class="text-4xl font-bold mb-2">{{ stat.number }}</div>
-          <div class="text-blue-100 text-sm">{{ stat.label }}</div>
-        </div>
+        @for (stat of stats(); track stat.label) {
+          <div class="text-center">
+            <div class="text-4xl font-bold mb-2">{{ stat.number }}</div>
+            <div class="text-blue-100 text-sm">{{ stat.label }}</div>
+          </div>
         }
       </div>
     </div>
