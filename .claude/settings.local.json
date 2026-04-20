@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude plugin *)",
+      "mcp__plugin_context-mode_context-mode__ctx_upgrade",
+      "Bash(node *)",
+      "Bash(nvm list *)",
+      "Bash(npm --version)",
+      "Bash(npm root *)"
+    ]
+  }
+}
