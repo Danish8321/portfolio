@@ -6,7 +6,12 @@
       "Bash(node *)",
       "Bash(nvm list *)",
       "Bash(npm --version)",
-      "Bash(npm root *)"
+      "Bash(npm root *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); hooks=d.get\\('hooks',{}\\); ss=hooks.get\\('SessionStart',[]\\); print\\(json.dumps\\(ss, indent=2\\)\\)\")",
+      "Bash(CLAUDE_PLUGIN_ROOT=\"C:/Users/MOGAMBO/.claude/plugins/cache/caveman/caveman/c2ed24b3e5d4\" node \"C:/Users/MOGAMBO/.claude/plugins/cache/caveman/caveman/c2ed24b3e5d4/hooks/caveman-activate.js\")",
+      "Bash(claude --debug)",
+      "mcp__plugin_context-mode_context-mode__ctx_batch_execute",
+      "mcp__plugin_context-mode_context-mode__ctx_execute"
     ]
   }
 }

@@ -29,12 +29,12 @@ Components and services depend only on the abstract `PortfolioRepository`, never
 
 ### Routing
 
-| Path | Module | Status |
-| --- | --- | --- |
-| `/` | — | Redirects to `/portfolio` |
-| `/portfolio` | `features/portfolio` | Lazy-loaded |
-| `/blog` | `features/blog` | Future |
-| `/blog/:slug` | `features/blog` | Future |
+| Path          | Module               | Status                    |
+| ------------- | -------------------- | ------------------------- |
+| `/`           | —                    | Redirects to `/portfolio` |
+| `/portfolio`  | `features/portfolio` | Lazy-loaded               |
+| `/blog`       | `features/blog`      | Future                    |
+| `/blog/:slug` | `features/blog`      | Future                    |
 
 ### State Management
 
